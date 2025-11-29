@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Etronic – Christmas Deals</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body class="dark">
+  <header>
+    <h1>Etronic</h1>
+    <nav>
+      <a href="./index.html">Home</a>
+      <a href="./cart.html">Cart (<span id="cart-count">0</span>)</a>
+      <input type="text" id="search-bar" placeholder="Search products..." onkeyup="filterProducts()">
+      <select id="category-filter" onchange="filterProducts()">
+        <option value="all">All Categories</option>
+        <option value="microcontroller">Microcontrollers</option>
+        <option value="raspberry pi">Raspberry Pi</option>
+        <option value="keyboard">Accessories</option>
+        <option value="pc">Mini PC</option>
+      </select>
+    </nav>
+  </header>
+
+  <div class="banner">🎄 Christmas Deals: Unwrap big savings!</div>
+
+  <main class="container">
+    <div id="products-grid" class="products-grid"></div>
+  </main>
+
+  <section id="reviews-section">
+    <h2>Reviews</h2>
+    <ul id="reviews-list"></ul>
+    <h3>Add a Review</h3>
+    <input type="text" id="review-name" placeholder="Your name">
+    <textarea id="review-text" placeholder="Your review"></textarea>
+    <button onclick="addReview()">Submit Review</button>
+  </section>
+
+  <footer>
+    <div id="about-us">
+      <h3>About Us</h3>
+      <p>Contact us: Phone 0123456789 | Email: etronic.example.com</p>
+      <p>We sell mini PCs, microcontrollers, Raspberry Pis, and accessories with amazing Christmas deals!</p>
+    </div>
+  </footer>
+
+  <script src="./products.js"></script>
+  <script src="./script.js"></script>
+  <div id="confirmation-modal" class="modal-overlay" style="display: none;">
+    <div class="modal-content">
+      <p id="confirmation-message"></p>
+      <div class="modal-buttons">
+        <button id="confirm-btn">Confirm</button>
+        <button id="cancel-btn">Cancel</button>
+      </div>
+    </div>
+  </div>
+  <div id="toast-container"></div>
+</body>
+</html>

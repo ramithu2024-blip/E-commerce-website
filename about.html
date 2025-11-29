@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>About Us – Mini Shop</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1 id="site-name">Mini Shop</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="cart.html">Cart</a>
+      <a href="about.html">About Us</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <h2>About Us</h2>
+    <p id="about-text"></p>
+  </main>
+
+  <script src="config.js"></script>
+  <script>
+    document.getElementById("site-name").textContent = siteConfig.siteName;
+    document.getElementById("about-text").textContent = siteConfig.aboutText;
+  </script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Order Confirmation – Etronic</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body class="dark">
+  <header>
+    <h1>Etronic</h1>
+    <nav>
+      <a href="./index.html">Home</a>
+      <a href="./cart.html">Cart (<span id="cart-count">0</span>)</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section id="confirmation-section">
+      <h2>Thank You For Your Order!</h2>
+      <p>Your order has been placed successfully. Here is a summary of your purchase:</p>
+      <div id="confirmation-summary">
+        <ul id="confirmation-items-list"></ul>
+        <p><strong>Total: $<span id="confirmation-total">0.00</span></strong></p>
+      </div>
+      <button onclick="window.location.href='./index.html'">Continue Shopping</button>
+    </section>
+  </main>
+
+  <script src="./products.js"></script>
+  <script src="./script.js"></script>
+  <div id="confirmation-modal" class="modal-overlay" style="display: none;">
+    <div class="modal-content">
+      <p id="confirmation-message"></p>
+      <div class="modal-buttons">
+        <button id="confirm-btn">Confirm</button>
+        <button id="cancel-btn">Cancel</button>
+      </div>
+    </div>
+  </div>
+  <div id="toast-container"></div>
+</body>
+</html>
